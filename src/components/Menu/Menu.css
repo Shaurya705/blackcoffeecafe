@@ -1,0 +1,115 @@
+.menu-section {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 30px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-tab:hover {
+  border-color: var(--accent-gold);
+  background: rgba(212, 163, 115, 0.05);
+}
+
+.menu-tab.active {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.menu-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.menu-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(10px);
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.menu-item h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.menu-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.menu-tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background: rgba(255, 186, 8, 0.15);
+  color: var(--accent-neon);
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.menu-item-price {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .menu-items-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .menu-grid {
+    padding: 24px;
+  }
+}
